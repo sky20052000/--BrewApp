@@ -39,7 +39,7 @@ const getBookList = async(req,res)=>{
              if(!getBookList){
                    return res.status(200).json({success:true, message:"No records found!"});
              }
-             return res.status(200).json({success:true, totalRecords:getBookDetail.length, data:getBookList});
+             return res.status(200).json({success:true, data:getBookList});
      
       }catch(e){
               // console.log(e,"ee")
