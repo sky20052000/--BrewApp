@@ -1,0 +1,59 @@
+step 1. 
+  i hoisted this code on render.....
+first user have to register    for local use https://bookmanagment-xqv3.onrender.com = http://localhost
+https://bookmanagment-xqv3.onrender.com/api/user/register  Api Method => Post
+
+for regiser use  = {
+     "name":"test3",
+     "email":"test3@gmail.com",
+     "password":"Test3@12345"
+}
+
+step 2. login with email and password 
+https://bookmanagment-xqv3.onrender.com/api/user/login   API method =>Post
+
+
+//  after that user can manage book thats means user able to perform crud 
+
+step 3.
+
+for create book 
+    https://bookmanagment-xqv3.onrender.com/api/book/addbook  Api method =>Post 
+    paylaod = {
+         "title":"the rABBITs",
+     "author":"mr kartlins",
+     "summary":"horror storys"
+    }
+
+
+   .. for get book list
+
+     https://bookmanagment-xqv3.onrender.com/api/book/getbooklist  Api method =>Get 
+
+  ..   for get book detail 
+     https://bookmanagment-xqv3.onrender.com/api/book/getbookdetail/id   Api method =>Get
+
+     ... for delete book by id 
+     https://bookmanagment-xqv3.onrender.com/api/book/deletebook/id  Api method =>delete
+
+     ... for update book 
+
+     https://bookmanagment-xqv3.onrender.com/api/book/updatebook  Api method =>Put
+
+     paylaod = {
+         "bookId":"654bf35b62ab840d81131307",
+     "title":"the dogss",
+     "author":"martin",
+     "summary":"take a bow "
+     }
+
+
+     step . 4 
+     for loacal set 
+     create .env file 
+
+Port = "7000"
+Host = "http://localhost"
+Mongo_Url = "mongodb://localhost:27017/BookManagment"
+Jwt_Secret_Key = "gfhfgjghjgjtretgbnnnnnnnnnnnnnnnnnnndgddddddddddddddddddddddd"
+paste credentails according your choice

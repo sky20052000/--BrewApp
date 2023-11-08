@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "8034921f-5d12-494e-a86e-95cda32ee188",
+		"name": "Book_Managment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17695013"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"name\":\"test2\",\r\n     \"email\":\"test2@gmail.com\",\r\n     \"password\":\"Test2@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://bookmanagment-xqv3.onrender.com/api/user/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"test1@gmail.com\",\r\n     \"password\":\"Test@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://bookmanagment-xqv3.onrender.com/api/user/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "addBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJjZDc3ZTdjZDJlNWM2YjEwNTY2NSIsInJvbGUiOiIxIiwiaWF0IjoxNjk5NDc2MjQ0LCJleHAiOjE2OTk1NjI2NDR9.l9Eb5bi7MN4PPK8SPSYsu5f4bFI-FYTUMnzO67RZpwc"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"title\":\"the rABBITs\",\r\n     \"author\":\"mr kartlins\",\r\n     \"summary\":\"horror storys\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://bookmanagment-xqv3.onrender.com/api/book/addbook"
+					},
+					"response": []
+				},
+				{
+					"name": "updateBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJjZDc3ZTdjZDJlNWM2YjEwNTY2NSIsInJvbGUiOiIxIiwiaWF0IjoxNjk5NDc2MjQ0LCJleHAiOjE2OTk1NjI2NDR9.l9Eb5bi7MN4PPK8SPSYsu5f4bFI-FYTUMnzO67RZpwc"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \"bookId\":\"654bf35b62ab840d81131307\",\r\n     \"title\":\"the dogss\",\r\n     \"author\":\"martin\",\r\n     \"summary\":\"take a bow \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://bookmanagment-xqv3.onrender.com/api/book/updatebook"
+					},
+					"response": []
+				},
+				{
+					"name": "getBookList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJjZDc3ZTdjZDJlNWM2YjEwNTY2NSIsInJvbGUiOiIxIiwiaWF0IjoxNjk5NDc2MjQ0LCJleHAiOjE2OTk1NjI2NDR9.l9Eb5bi7MN4PPK8SPSYsu5f4bFI-FYTUMnzO67RZpwc"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"title\":\"the dog1\",\r\n     \"author\":\"mr kartlins\",\r\n     \"summary\":\"horror storys\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://bookmanagment-xqv3.onrender.com/api/book/getbooklist"
+					},
+					"response": []
+				},
+				{
+					"name": "getBookDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJhNGYxN2RiNDFlODM3YjlmOWFlYSIsInJvbGUiOiIxIiwiaWF0IjoxNjk5NDU5MDAzLCJleHAiOjE2OTk1NDU0MDN9.SwO8Rr2uqBk0r6T4pyczgobe1eYo9Q0ILOwQ8n4md_Q"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"title\":\"the dog1\",\r\n     \"author\":\"mr kartlins\",\r\n     \"summary\":\"horror storys\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://bookmanagment-xqv3.onrender.com/api/book/getbookdetail/654bf35b62ab840d81131307"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBookById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJhNGYxN2RiNDFlODM3YjlmOWFlYSIsInJvbGUiOiIxIiwiaWF0IjoxNjk5NDU5MDAzLCJleHAiOjE2OTk1NDU0MDN9.SwO8Rr2uqBk0r6T4pyczgobe1eYo9Q0ILOwQ8n4md_Q"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"title\":\"the dog1\",\r\n     \"author\":\"mr kartlins\",\r\n     \"summary\":\"horror storys\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://bookmanagment-xqv3.onrender.com/api/book/deletebook/654bf53a946d977f5537c966"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
