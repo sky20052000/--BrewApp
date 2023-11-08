@@ -34,7 +34,7 @@ const addBook = async(req,res)=>{
 }
 
 const getBookList = async(req,res)=>{
-    try{
+    try{   
            const getBookList = await Book.find({createdBy:req.find_user.id});
              if(!getBookList){
                    return res.status(200).json({success:true, message:"No records found!"});
